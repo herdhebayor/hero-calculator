@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(250, 250, 250, 0.864);
+}
+.dark{
+    background-color: rgb(92, 91, 91);
+    color: rgb(100%, 100%, 100%);;
+}
+.dark .container{
+    background-color: rgb(31, 31, 31);
+}
+.container{
+    background-color: rgb(100%, 100%, 100%);
+    box-shadow: 0 0 3px  rgba(82, 82, 82, 0.164),
+                0 5px 20px rgba(82, 82, 82, 0.194);
+    height: fit-content;
+    border-radius: 10px;
+    max-width: 330px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.column{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.calculator >.column{
+    margin: 0;
+}
+.dark .buttons{
+    background-color:  rgb(35, 35, 35);
+    color: rgb(100%, 100%, 100%);
+    
+}
+.buttons{
+    padding: 10px;
+    border-radius: 25px 25px 8px 8px ;
+    background-color: rgba(250, 250, 250, 0.864);
+    margin-top: 5px;
+    color:  rgb(31, 31, 31);
+    transition: all 0.3s ease-in-out;
+}
+.column input[type = button]{
+    width: 100%;
+    min-width: 70px;
+    padding: 15px;
+    padding-inline: 30px;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+.dark input{
+    color: rgb(100%, 100%, 100%);
+}
+.buttons .column:first-child input,.dark .buttons .column:first-child input{
+    color: rgb(72, 252, 192);
+}
+.buttons .column input:last-child, .dark .buttons .column input:last-child{
+    color: brown;
+}
+.history-container{
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: bottom;
+    flex-direction: column-reverse;
+}
+.history{
+    height: fit-content;
+    max-height: 100%;
+    overflow-y: scroll;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+    color: rgb(193, 191, 191);
+}
+.dark .display-box{
+    color: rgb(100%, 100%, 100%);
+}
+.display-box{
+    width: 100%;
+    background-color:transparent ;
+    outline: none;
+    border: none;
+    padding: 30px;
+    padding-block: 10px;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 700;
+    overflow-x: scroll;
+
+}
+.dark .toggle{
+    background-color: rgb(38, 38, 38);
+}
+.toggle{
+    position: absolute;
+    top: 20px;
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+    background-color: rgba(250, 250, 250, 0.864);
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px;
+}
+.toggle button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+i{
+    color: rgb(181, 179, 179);
+}
+@media screen and (max-width:500px) {
+    body{
+        padding: 0;
+        display: block;
+    }
+    .container,
+    .calculator{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .column input[type = button]{
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+    
+}
