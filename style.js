@@ -18,7 +18,7 @@ function display(value){
         return;
     }else if (
 			result.value !== ' ' &&
-			value.match(/[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/)
+			value.match(/[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/) && value!== '.'
 		) {
 			result.value += ' ' + value + ' ';
 		} else {
@@ -42,4 +42,4 @@ lightBtn.addEventListener('click', () => {
 	element.classList.remove('dark')
 	console.log('click')
 })
-//lightBtn.addEventListener('click',()=>document.body.classlist.remove('dark'))
+alert(window.innerWidth)
