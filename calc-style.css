@@ -68,8 +68,16 @@ body{
     font-size: 1.2rem;
     transition: all 0.3s ease-in-out;
 }
+input[type=button]:hover{
+    background-color: rgb(245, 242, 242);
+    border-radius: 10px;
+}
 .dark input{
     color: rgb(100%, 100%, 100%);
+}
+.dark input[type=button]:hover{
+    background-color: rgb(47, 47, 47);
+    border-radius: 10px;
 }
 .buttons .column:first-child input,.dark .buttons .column:first-child input{
     color: rgb(72, 252, 192);
