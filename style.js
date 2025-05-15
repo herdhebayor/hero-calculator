@@ -42,4 +42,3 @@ lightBtn.addEventListener('click', () => {
 	element.classList.remove('dark')
 	console.log('click')
 })
-alert(window.innerWidth)

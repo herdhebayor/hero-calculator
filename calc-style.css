@@ -58,6 +58,7 @@ body{
 .column input[type = button]{
     width: 100%;
     min-width: 70px;
+    height: 50px;
     padding: 15px;
     padding-inline: 30px;
     font-weight: 700;
@@ -79,7 +80,7 @@ body{
 .history-container{
     background-color: transparent;
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin: 0;
     padding: 30px;
     display: flex;
@@ -90,7 +91,7 @@ body{
     height: fit-content;
     max-height: 100%;
     overflow-y: scroll;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-align: right;
     color: rgb(193, 191, 191);
@@ -136,7 +137,7 @@ body{
 i{
     color: rgb(181, 179, 179);
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
     body{
         padding: 0;
         display: block;
@@ -149,10 +150,20 @@ i{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: 0;
+    }
+    .calculator > .column:first-child{
+        height: 100%;
+    }
+    .history-container{
+        height: 100%;
+    }
+    .display-box{
+        padding-block: 40px;
     }
     .column input[type = button]{
         padding: 20px;
-        font-size: 1.3rem;
+        height: 90px;
     }
     
 }
